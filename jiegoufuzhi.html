@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的解构赋值</title>
+</head>
+<body>
+    <script>
+        //1、数组的解构赋值，如果解构不成功，变量的值就等于undefined。
+        let [foo, [[bar], baz]] = [1, [[2], 3]];
+        let [ , , third] = ["foo", "bar", "baz"];
+        let [x, , y] = [1, 2, 3];
+        let [head, ...tail] = [1, 2, 3, 4];
+        let [x, y, ...z] = ['a'];
+        //2、对象的解构赋值 
+        let { bar, foo } = { foo: 'aaa', bar: 'bbb' };
+        //3、字符串解构赋值
+        const [a, b, c, d, e] = 'hello';
+    </script>
+</body>
+</html>
