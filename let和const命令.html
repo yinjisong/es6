@@ -30,6 +30,13 @@
             let i = 'abc';
             console.log(i);
         }
+        //另外 let 和const命令存在暂时性死区，即如果未声明就使用该变量将会报错
+        var tmp = 123;
+
+        if (true) {
+        tmp = 'abc'; // ReferenceError
+        let tmp;
+        }
     </script>
 </body>
 </html>
